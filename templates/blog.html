@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div id="blog">
+		<h3 id="subject">{{subject}}</h3>
+		<pre>{{content}}</pre>
+		<p>Posted On: {{created.strftime('%I:%M:%S %p %d %b %Y')}}</p>
+		<p id="blogpost">Post ID: {{blog_id}}</p>
+		<a href="{{blog_id}}.json">See JSON</a>
+		<p>Queried {{time}} seconds ago</p>
+	</div>
+	
+	<br/>
+	<a href="/">Go Home</a>
+
+{% endblock %}

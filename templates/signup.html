@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<form method="POST" id="signup">
+		<h2>Sign up for an account today!</h2>
+		<table>
+			<tr>
+				<td>Username:</td>
+				<td><input type="text" name="username" value="{{username}}"/></td>
+				<td><div class="error" id="error_user">{{error_user}}</div></td>
+			</tr>
+			<tr>
+				<td>Password:</td>
+				<td><input type="password" name="password"/></td>
+				<td><div class="error" id="error_password">{{error_password}}</div></td>
+			</tr>
+			<tr>
+				<td>Verify:</td>
+				<td><input type="password" name="verify"/></td>
+				<td><div class="error" id="error_verify">{{error_verify}}</div></td>
+			</tr>
+			<tr>
+				<td>Email (Optional):</td>
+				<td><input type="email" name="email" value="{{email}}"/></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit"/></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><span id="signup_redirect">Already a member? <a href="login">Login here</a></span></td>
+			</tr>
+		</table>
+	</form>
+{% endblock %}

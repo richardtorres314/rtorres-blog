@@ -1,0 +1,166 @@
+body {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-size: 18pt;
+	font-family: sans-serif;
+	color: dimgray;
+	background-color: #EAA;
+}
+span {
+	float: left;
+	margin: 5px 0;
+}
+label {
+	display: inline-block;
+	margin: 5px;
+	font-size: 0.8em;
+}
+textarea {
+	resize: none;
+	height: 320px;
+	padding: 5px;
+	font-family: sans-serif;
+}
+#title {
+	padding: 5px;
+	font-family: sans-serif;
+}
+button {
+	color: dimgray;
+	font-weight: bold;
+	border: none;
+	width: 120px;
+	height: 40px;
+	background-color: rgb(236,236,236);
+	outline-color: gray;
+	cursor: pointer;
+	font-size: 0.8em;
+}
+#error {
+	color: rgb(250,100,100);
+	font-size: 12pt;
+	font-weight: bold;
+}
+#newpost input, #newpost textarea {
+	outline-color: gray;
+	border: 2px solid lightgray;
+	background-color: white;
+	color: dimgray;
+	width: 640px;
+	font-size: 1em;
+}
+#newpost input {
+	height: 1.25em;
+}
+#content, #subject, #blogpost {
+	width: 640px;
+	margin: 5px 0;
+	text-align: left;
+}
+#blogpost {
+	font-size: 1em;
+}
+#blog {
+	background-color: rgb(247,247,247);
+	margin: 10px;
+	width: 640px;
+	display: inline-block;
+	padding: 10px 20px;
+	font-size: 10pt;
+	text-align: left;
+}
+a:not(#header) {
+	font-size: 0.8em;
+	text-decoration: none;
+	color: dimgray;
+	background-color: rgb(240,220,240);
+	display: inline-block;
+	padding: 10px 20px;
+}
+
+#header {
+	color: white;
+	text-decoration: none;
+	margin: 0;
+}
+
+#headtitle {
+	background-color: #55F;
+	margin: 0;
+	padding: 0.2em 0;
+}
+
+#subject {
+	font-size: 1.5em;
+}
+pre {
+	font-size: 1.25em;
+	font-family: sans-serif;
+	width: 640px;
+	text-align: justify;
+	white-space: pre-wrap;
+}
+
+#signup input, #login input {
+	outline-color: gray;
+	border: 2px solid lightgray;
+	color: dimgray;
+	font-size: 1em;
+	height: 1.25em;
+}
+
+#login input[type=submit] {
+	background-color: #6E6;
+	padding: 0.2em 0.2em;
+	height: 1.5em;
+	width: 5em;
+	border: none;
+	cursor: pointer;
+}
+
+#signup, #login {
+	display: inline-block;
+	text-align: center;
+	margin: auto;
+}
+
+#user_login {
+	position: absolute;
+	top: 0.5em;
+	right: 0.5em;
+	color: white;
+}
+
+#user_login a {
+	background-color: transparent;
+	color: white;
+}
+
+#signup td, #login td {
+	height: 2em;
+}
+
+#signup td:first-child, #login td:first-child {
+	text-align: right;
+}
+
+#signup_redirect {
+	font-size: 0.8em;
+}
+
+#user_redirect a {
+	font-size: 1em;
+	background-color: transparent;
+	color: white;
+	font-weight: bold;
+	padding: 0;
+}
+
+#user_redirect a:hover {
+	color: #F66;
+}
+
+#navbar {
+	margin-top: 10px;
+}

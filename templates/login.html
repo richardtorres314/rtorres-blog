@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<form method="post" id="login">
+		<h2>Login</h2>
+		<table>
+			<tr>
+				<td>Username</td>
+				<td><input type="text" name="username"/></td>
+				<td><div>{{ error_user }}</div></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="password" name="password"/></td>
+				<td>{{ error_password }}</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit"/></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><span id="user_redirect">Need to signup? <a href="/blog/signup">Signup Here</a></span></td>
+			</tr>
+		</table>
+	</form>
+{% endblock %}

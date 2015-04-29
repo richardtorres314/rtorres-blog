@@ -1,0 +1,26 @@
+application: rtorres-blog
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /styles
+  static_dir: styles
+
+- url: .*
+  script: main.app
+
+- url: /styles/(.*\.(css)) 
+  static_files: styles/\1
+  upload: styles/(.*\.(css))
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+- name: jinja2
+  version: latest
