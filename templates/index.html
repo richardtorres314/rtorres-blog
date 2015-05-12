@@ -1,36 +1,18 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-<header>
-{% if username: %}
-	<h3>Welcome back, {{username}}!</h3>
-	<div id="user_login">
-		<a href="/blog/newpost">Write a Post</a> &bullet;
-		<a href="/blog/logout">Logout</a>
-	</div>
-{% else: %}
-	<div id="user_login">
-		<a href="blog/signup">Signup</a> &bullet;
-		<a href="blog/login">Login</a><br/>
-	</div>
+{% if username %}
+	<div><h3>Welcome back, {{username}}!</h3></div>
 {% endif %}
-</header>
 
 <div id="navbar">
 	{% if page_no > 1 %}
 		<a href="/blog/page/1">First Page</a>
-	{% endif %}
-	
-	{% if page_no > 1 %}
 		<a href="/blog/page/{{page_no-1}}">Previous Page</a>
 	{% endif %}
 	
-	{% if page_no <= page_nos %}
+	{% if page_no < page_nos %}
 		<a href="/blog/page/{{page_no+1}}">Next Page</a>
-	{% endif %}
-	
-	{% if page_no <= page_nos %}
 		<a href="/blog/page/{{page_nos+1}}">Last Page</a>
 	{% endif %}
 	{% for x in range(1, page_nos+2): %}
@@ -47,11 +29,15 @@
 		<h3 id="subject">{{blogpost.subject}}</h3>
 		<pre>{{blogpost.content}}</pre>
 		<p>Posted On: {{blogpost.created.strftime('%I:%M:%S %p %d %b %Y')}}</p>
+		{% if blogpost.updated %}
+			<p>Updated On: {{blogpost.updated.strftime('%I:%M:%S %p %d %b %Y')}}</p>
+		{% endif %}
+		{% if blogpost.author %}
+			<p>Posted By: {{blogpost.author}}</p>
+		{% endif %}
 		<p id="blogpost">Post ID: {{blogpost.key().id()}}</p>
-		<a href="blog/{{blogpost.key().id()}}">See Blog Post</a>
+		<a href="/blog/{{blogpost.key().id()}}">See Blog Post</a>
 	</div><br/>
 {% endfor %}
-
-<p>Queried {{time}} seconds ago</p>
 
 {% endblock %}

@@ -21,16 +21,19 @@ for educational purposes.
 - Users can create and log into accounts
 - Form verification for valid information
 - Pagination and permalinks to blogposts
-- Last queried information for each blogpost
+- Users can create, update, and delete personal posts
+- Redirection for visitors attempting to post without logging in
 
 ### To Do ###
 
 - Clean up the paginator
-- Display timestamps for created and last edited
-- Add functionality for updating and deleting individual blogposts
+- Do not update when no edits have been made
+- Add/cleanup style
+- Deal with cookies disabled
+- 404 handling
 
 ### Legal Notice ###
 
 This application is entirely fictitious and is for demonstration purposes 
 only. Anything in likeness is purely coincidental. For any questions or 
-concerns, please contact me, the author of this repository.
+concerns, please contact me, the author of this application.

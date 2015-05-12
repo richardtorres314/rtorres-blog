@@ -42,21 +42,11 @@ button {
 	font-size: 12pt;
 	font-weight: bold;
 }
-#newpost input, #newpost textarea {
-	outline-color: gray;
-	border: 2px solid lightgray;
-	background-color: white;
-	color: dimgray;
-	width: 640px;
-	font-size: 1em;
-}
-#newpost input {
-	height: 1.25em;
-}
 #content, #subject, #blogpost {
 	width: 640px;
 	margin: 5px 0;
 	text-align: left;
+	word-wrap: break-word;
 }
 #blogpost {
 	font-size: 1em;
@@ -85,15 +75,38 @@ a:not(#header) {
 	margin: 0;
 }
 
-#headtitle {
+header {
 	background-color: #55F;
+	text-align: center;
+	margin: auto;
+	padding: 0.25em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header div {
+	width: 100%;
+}
+
+header h1 {
 	margin: 0;
-	padding: 0.2em 0;
+}
+
+#user_forms {
+	color: white;
+	text-align: right;
+}
+
+#user_forms a {
+	background-color: transparent;
+	color: white;
 }
 
 #subject {
 	font-size: 1.5em;
 }
+
 pre {
 	font-size: 1.25em;
 	font-family: sans-serif;
@@ -123,18 +136,6 @@ pre {
 	display: inline-block;
 	text-align: center;
 	margin: auto;
-}
-
-#user_login {
-	position: absolute;
-	top: 0.5em;
-	right: 0.5em;
-	color: white;
-}
-
-#user_login a {
-	background-color: transparent;
-	color: white;
 }
 
 #signup td, #login td {

@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-<form method="post" id="newpost">
+<form method="post" id="newpost" action="/blog/{{blog_id}}/edit">
 	<div name="error" id="error">{{error}}</div>
 	<label>
 		<span>Subject</span><br>

@@ -3,11 +3,27 @@
 
 <head>
 <title>My Blog</title>
-<link rel="stylesheet" type="text/css" href="../../styles/style.css"/>
+<link rel="stylesheet" type="text/css" href="/styles/style.css"/>
+{% block head %}
+{% endblock %}
 </head>
 
 <body>
-<a href="/" id="header"><h1 id="headtitle">Torres Blog</h1></a>
+<header>
+	<div></div>
+	<div>
+		<h1><a href="/" id="header">Torres Blog</a></h1>
+	</div>
+	<div id="user_forms">
+		{% if username: %}
+			<a href="/blog/newpost">Write a Post</a> &bullet;
+			<a href="/blog/logout">Logout</a>
+		{% else: %}
+			<a href="/blog/signup">Signup</a> &bullet;
+			<a href="/blog/login">Login</a><br/>
+		{% endif %}
+	</div>
+</header>
 {% block content %}
 {% endblock %}
 </body>
