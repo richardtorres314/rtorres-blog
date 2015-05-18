@@ -18,17 +18,15 @@ for educational purposes.
 
 ### Key Features ###
 
-- Users can create and log into accounts
-- Form verification for valid information
-- Pagination and permalinks to blogposts
-- Users can create, update, and delete personal posts
-- Redirection for visitors attempting to post without logging in
+- Cookie-based authentication
+- User signup and login features
+- Creating, updating, and deleting of a user's personal entries
+- Form verification
+- Pagination and permalinks to blog entries
+- Security features to prevent malicious cookies
 
 ### To Do ###
 
-- Clean up the paginator
-- Do not update when no edits have been made
-- Add/cleanup style
 - Deal with cookies disabled
 - 404 handling
 - Add "like" feature

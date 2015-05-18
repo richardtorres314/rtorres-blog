@@ -12,7 +12,10 @@
 		<input type="text" id="title" name="subject" autofocus autocomplete="off" value="{{subject}}"/><br/>
 		<label for="content">Content</label><br/>
 		<textarea name="content">{{content}}</textarea><br/>
-		<div><input type="submit" value="Post"/></div>
+		<div id="post-form-options">
+			<div><a href="/blog/{{blog_id}}">Cancel</a></div>
+			<div><input type="submit" value="Post"/></div>
+		</div>
 	</form>
 </div>
 {% endblock %}
