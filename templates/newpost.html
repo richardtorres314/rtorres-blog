@@ -5,20 +5,14 @@
 {% endblock %}
 
 {% block content %}
-<form method="post" id="newpost">
-	<div name="error" id="error">{{error}}</div>
-	<label>
-		<span>Subject</span><br>
-		<input type="text" id="title" name="subject" autofocus autocomplete="off" value="{{subject}}"/><br>
-	</label>
-	
-	<br>
-	<label>
-		<span>Content</span><br>
-		<textarea name="content">{{content}}</textarea>
-	</label>
-	
-	<br>
-	<button>Post</button>
-</form>
+<div id="post_form">
+	<form method="post">
+		<div name="error" id="error">{{error}}</div>
+		<label for="subject">Subject</label><br/>
+		<input type="text" id="title" name="subject" autofocus autocomplete="off" value="{{subject}}"/><br/>
+		<label for="content">Content</label><br/>
+		<textarea name="content">{{content}}</textarea><br/>
+		<div><input type="submit" value="Post"/></div>
+	</form>
+</div>
 {% endblock %}

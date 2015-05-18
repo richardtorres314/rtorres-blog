@@ -1,141 +1,197 @@
-body {
-	margin: 0;
-	padding: 0;
+#wrapper {
+	width: 50%;
+	margin: 10px auto;
+}
+
+#greeting {
 	text-align: center;
-	font-size: 18pt;
-	font-family: sans-serif;
-	color: dimgray;
-	background-color: #EAA;
+	font-family: Muli;
+	color: white;
 }
-span {
-	float: left;
-	margin: 5px 0;
+
+#greeting h3 {
+	margin: 0.5em auto;
 }
+
+#navbar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	font-size: 1em;
+	font-family: Muli;
+}
+
+#navbar a:hover {
+	color: #F77;
+}
+
+#navbar div {
+	width: 100%;
+}
+
+#navbar div a {
+	color: #FAFAFA;
+}
+
+#next-page, #last-page {
+	text-align: right;
+}
+
 label {
 	display: inline-block;
 	margin: 5px;
 	font-size: 0.8em;
+	color: white;
+	font-weight: bold;
 }
+
 textarea {
 	resize: none;
 	height: 320px;
+}
+
+
+#title, textarea {
 	padding: 5px;
-	font-family: sans-serif;
+	font-family: Muli;
+	font-size: 0.75em;
 }
-#title {
-	padding: 5px;
-	font-family: sans-serif;
-}
-button {
-	color: dimgray;
-	font-weight: bold;
-	border: none;
-	width: 120px;
-	height: 40px;
-	background-color: rgb(236,236,236);
-	outline-color: gray;
-	cursor: pointer;
-	font-size: 0.8em;
-}
+
 #error {
-	color: rgb(250,100,100);
-	font-size: 12pt;
+	color: #F88;
+	font-size: 0.75em;
 	font-weight: bold;
 }
-#content, #subject, #blogpost {
+
+#content, #blogpost {
 	width: 640px;
 	margin: 5px 0;
 	text-align: left;
 	word-wrap: break-word;
 }
+
 #blogpost {
 	font-size: 1em;
 }
+
 #blog {
-	background-color: rgb(247,247,247);
-	margin: 10px;
-	width: 640px;
+	box-sizing: border-box;
+	width: 100%;
+	background-color: white;
 	display: inline-block;
-	padding: 10px 20px;
+	padding: 20px;
 	font-size: 10pt;
-	text-align: left;
+	border-radius: 5px;
+	margin: 10px 0;
 }
-a:not(#header) {
-	font-size: 0.8em;
+
+#post_link {
+	text-align: center;
+}
+
+#blog-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 20px auto 10px auto;
+}
+
+#blog-wrapper div {
+	width: 100%;
+	text-align: center;
+}
+
+#blog-wrapper form {
+	margin: 0;
+	padding: 0;
+}
+
+#blog p {
+	margin: 5px 0;
+}
+
+#blog .subject {
+	font-size: 1.5em;
+}
+
+#home_link {
+	text-align: center;
+}
+
+#home_link a {
+	color: white;
+}
+
+a {
+	font-size: 1em;
 	text-decoration: none;
 	color: dimgray;
-	background-color: rgb(240,220,240);
 	display: inline-block;
-	padding: 10px 20px;
+	font-weight: bold;
 }
 
-#header {
-	color: white;
-	text-decoration: none;
+a:hover, input[type=submit]:hover {
+	color: #F77;
+}
+
+#btn-delete {
+	border: none;
+	cursor: pointer;
+	background: none;
+	font-size: 1em;
+	font-family: Muli;
+	font-weight: bold;
 	margin: 0;
+	padding: 0;
 }
 
-header {
-	background-color: #55F;
-	text-align: center;
+#post_form {
 	margin: auto;
-	padding: 0.25em;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	width: 640px;
 }
 
-header div {
+#post_form input[type=text], #post_form textarea {
 	width: 100%;
 }
 
-header h1 {
-	margin: 0;
-}
-
-#user_forms {
-	color: white;
-	text-align: right;
-}
-
-#user_forms a {
-	background-color: transparent;
-	color: white;
-}
-
-#subject {
-	font-size: 1.5em;
+#post_form div {
+	text-align: center;
 }
 
 pre {
 	font-size: 1.25em;
 	font-family: sans-serif;
-	width: 640px;
 	text-align: justify;
 	white-space: pre-wrap;
+	word-wrap: break-word;
 }
 
-#signup input, #login input {
+#signup input[type=text], #signup input[type=password], #login input[type=text], #login input[type=password], #signup input[type=email], #login input[type=email] {
 	outline-color: gray;
-	border: 2px solid lightgray;
-	color: dimgray;
-	font-size: 1em;
-	height: 1.25em;
+	border: none;
+	font-size: 0.9em;
 }
 
-#login input[type=submit] {
-	background-color: #6E6;
-	padding: 0.2em 0.2em;
-	height: 1.5em;
-	width: 5em;
+input[type=submit] {
+	padding: 0.2em 1em;
 	border: none;
 	cursor: pointer;
+	font-size: 0.75em;
+	color: dimgray;
+	font-weight: bold;
 }
 
 #signup, #login {
+	background-color: #EFEFEF;
 	display: inline-block;
 	text-align: center;
 	margin: auto;
+	padding: 10px 20px;
+}
+
+#signup a, #login a {
+	font-size: 0.9em;
 }
 
 #signup td, #login td {
@@ -150,18 +206,7 @@ pre {
 	font-size: 0.8em;
 }
 
-#user_redirect a {
+#signup input[type=submit], #login input[type=submit] {
+	background: none;
 	font-size: 1em;
-	background-color: transparent;
-	color: white;
-	font-weight: bold;
-	padding: 0;
-}
-
-#user_redirect a:hover {
-	color: #F66;
-}
-
-#navbar {
-	margin-top: 10px;
 }

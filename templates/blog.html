@@ -1,26 +1,28 @@
 {% extends "base.html" %}
 
 {% block content %}
-	<div id="blog">
-		<h3 id="subject">{{subject}}</h3>
-		<pre>{{content}}</pre>
-		<p>Posted On: {{created.strftime('%I:%M:%S %p %d %b %Y')}}</p>
-		{% if updated %}
-			<p>Updated on: {{updated.strftime('%I:%M:%S %p %d %b %Y')}}</p>
-		{% endif %}
-		<p id="blogpost">Post ID: {{blog_id}}</p>
-		{% if author %}
-			<p>Posted by: {{author}}</p>
-		{% endif %}
-		<a href="{{blog_id}}.json">See JSON</a>
-		{% if author and author == username %}
-			<form method="post" action="/blog/{{blog_id}}" onsubmit="return confirm('Are you sure you want to delete?')">
-				<input type="submit" value="delete post?"/>
-			</form>
-			<a href="/blog/{{blog_id}}/edit">Edit Post</a>
-		{% endif %}
+	<div id="wrapper">
+		<div id="blog">
+			<a href="/blog/{{blog_id}}"><div class="subject">{{subject}}</div></a>
+			<pre>{{content}}</pre>
+			<p>Posted On: {{created.strftime('%I:%M:%S %p %d %b %Y')}}</p>
+			{% if updated %}
+				<p>Updated on: {{updated.strftime('%I:%M:%S %p %d %b %Y')}}</p>
+			{% endif %}
+				<p>Posted by: {{author}}</p>
+			<div id="blog-wrapper">
+				<div>
+				<a href="{{blog_id}}.json">See JSON</a>
+				</div>
+				{% if author == username or username == 'rtorr05' %}
+					<div>
+						<form method="post" action="/blog/{{blog_id}}" onsubmit="return confirm('Are you sure you want to delete?')">
+							<input type="submit" id="btn-delete" value="Delete Post"/>
+						</form>
+					</div>
+					<div><a href="/blog/{{blog_id}}/edit">Edit Post</a></div>
+				{% endif %}
+			</div>
+		</div>
 	</div>
-	
-	<br/>
-	<a href="/">Go Home</a>
 {% endblock %}

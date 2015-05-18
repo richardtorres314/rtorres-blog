@@ -31,6 +31,7 @@ for educational purposes.
 - Add/cleanup style
 - Deal with cookies disabled
 - 404 handling
+- Add "like" feature
 
 ### Legal Notice ###
 

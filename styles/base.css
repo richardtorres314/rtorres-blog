@@ -1,0 +1,72 @@
+html {
+	width: 100%;
+}
+
+body {
+	font-size: 18pt;
+	font-family: Muli;
+	color: dimgray;
+	background-color: #77D;
+	display: flex;
+	flex-direction: column;
+	cursor: default;
+}
+
+footer {
+	color: white;
+	font-size: 12pt;
+	text-align: center;
+	margin-top: 10px;
+	padding: 10px 0;
+}
+
+header, footer {
+	background-color: none;
+	font-family: Muli;
+}
+
+header {
+	text-align: center;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+header span {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header .flex-head {
+	width: 100%;
+}
+
+.flex-head div {
+	display: inline-block;
+}
+
+.bullet {
+	margin: 0 10px;
+}
+
+#user_forms {
+	box-sizing: border-box;
+	color: white;
+	text-align: right;
+	padding-right: 1em;
+}
+
+header h1 {
+	margin: 0;
+}
+
+header a {
+	color: white;
+	text-decoration: none;
+}
+
+header #sub-header {
+	font-size: 0.8em;
+	color: #DDD;
+	font-weight: bold;
+}
