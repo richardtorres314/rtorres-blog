@@ -1,0 +1,38 @@
+#head-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+#user_forms {
+	text-align: center;
+}
+
+header h1 {
+	font-size: 1.4em;
+}
+
+.flex-head {
+	font-size: 0.75em;
+}
+
+#wrapper {
+	width: 100%;
+	min-width: inherit;
+}
+
+#navbar {
+	width: 100%;
+}
+
+#navbar div a {
+	font-size: 0.75em;
+}
+
+#blog {
+	width: 100%;
+}
+
+#blog > * {
+	width: 100%;
+	display: inline-block;
+}

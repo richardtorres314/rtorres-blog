@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-<title>Academy Blog</title>
-<link rel="stylesheet" type="text/css" href="/styles/style.css"/>
-<link rel="stylesheet" type="text/css" href="/styles/base.css"/>
-<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'/>
-<link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
-{% block head %}
-{% endblock %}
-</head>
-
-<body>
-<header>
-	<span>
-	<div class="flex-head"></div>
-	<div class="flex-head">
-		<h1><a href="/" id="header">Academy Blog</a></h1>
-	</div>
-	<div id="user_forms" class="flex-head">
-			{% if username: %}
-				<div><a href="/blog/newpost">Write a Post</a></div>
-				<div class="bullet">&bullet;</div>
-				<div><a href="/blog/logout">Logout</a></div>
-			{% else: %}
-				<div><a href="/blog/signup">Signup</a></div>
-				<div class="bullet">&bullet;</div>
-				<div><a href="/blog/login">Login</a></div>
-			{% endif %}
-	</div>
-	</span>
-	<div id="sub-header">A blog by educators, for educators</div>
-</header>
-{% block content %}
-{% endblock %}
-<footer>
-	Richard Torres &copy; 2015. All rights reserved.
-</footer>
-</body>
+	<head>
+		<title>Academy Blog</title>
+		<link href="/styles/style.css" rel="stylesheet" type="text/css"/>
+		<link href="/styles/base.css" rel="stylesheet" type="text/css"/>
+		<link href="/styles/tablet.css" rel="stylesheet" type="text/css" meta="all and (max-width: 768px)"/>
+		<link href="/styles/tablet.css" rel="stylesheet" type="text/css" meta="all and (max-display-width: 768px)"/>
+		<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'/>
+		<link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+		{% block head %}
+		{% endblock %}
+	</head>
+	
+	<body>
+		<header>
+			<div id="head-wrapper">
+				<div class="flex-head"></div>
+				<div class="flex-head">
+					<h1><a href="/blog" id="header">Academy Blog</a></h1>
+				</div>
+				<div id="user_forms" class="flex-head">
+					{% if username: %}
+						<div id="head-left"><a href="/blog/newpost">Write a Post</a></div>
+						<div class="bullet" id="head-center">&bullet;</div>
+						<div id="head-right"><a href="/blog/logout">Logout</a></div>
+					{% else: %}
+						<div id="head-left"><a href="/blog/signup">Signup</a></div>
+						<div class="bullet" id="head-center">&bullet;</div>
+						<div id="head-right"><a href="/blog/login">Login</a></div>
+					{% endif %}
+				</div>
+			</div>
+			<div id="sub-header">A blog by educators, for educators</div>
+		</header>
+		{% block content %}
+		{% endblock %}
+		<footer>
+			Richard Torres &copy; 2015. All rights reserved.
+		</footer>
+	</body>
 </html>

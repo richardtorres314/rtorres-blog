@@ -1,0 +1,129 @@
+body { font-family: Montserrat; color: #444; }
+
+#wrapper { width: 95%; margin: auto; }
+
+h1 { font-family: Montserrat; font-size: 3em; color: #444;
+	 text-align: center; margin: 0; padding: 0; }
+
+a { text-decoration: none; color: #444; display: inline-block; }
+
+header { display: flex; justify-content: center; align-items: center; }
+header a { color: #FFF; border-radius: 50%; }
+
+#head-right a {
+	height: 100px; width: 100px; background-color: LightSalmon;
+	display: flex; align-items: center; justify-content: center;
+}
+
+#head-left { flex-grow: 4; }
+
+#head-right { display: flex; justify-content: space-between;
+			  align-items: center; flex-grow: 1; }
+
+form { width: 640px; margin: auto; }
+
+form input[type=text], form input[type=email], form textarea {
+	width: 100%; padding: 5px 10px; font-size: 1em;
+	border: none; border-radius: 5px; outline: none;
+	background-color: #F4F4F4; box-sizing: border-box;
+}
+
+form input[type=text]:focus, form input[type=email]:focus, form textarea:focus {
+	border: 1.5px solid #AAA;
+}
+
+#submit { text-align: center; }
+
+input[type=submit] {
+	background-color: transparent;
+	border: 4px solid LightSalmon;
+	border-radius: 5px;
+	font-family: Montserrat;
+	padding: 15px 20px;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 1em;
+	color: #444;
+	outline: none;
+}
+
+input[type=text], input[type=email] {
+	height: 30pt; font-family: Montserrat; color: #444;
+}
+
+textarea {
+	border: 0;
+	resize: none;
+	margin: 0; padding: 0;
+	height: 320px;
+	font-family: Montserrat;
+}
+
+#name, label#email, #message { padding: 5px 0; }
+#form-instruct { text-align: center; color: #AAA; }
+h2 { font-size: 2.5em; text-align: center; padding: 0em; margin: 0em; }
+#portfolio-wrapper img { width: 100%; }
+
+#portfolio-wrapper {
+	display: flex; justify-content: center; align-items: center;
+	flex-wrap: wrap; width: 100%;
+}
+
+#portfolio-wrapper div { width: 50%; text-align: center; }
+#portfolio-wrapper a { width: 90%; }
+
+#social-media {
+	width: 80%; margin: auto;
+	display: flex; flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+#social-media a {
+	border-radius: 50%;
+	padding: 0; margin: 10px 0;
+	width: 64px; height: 64px;
+	background-position: center; background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#social-media div {
+	text-align: center; margin: 10px 0;
+	width: 64px; height: 64px;
+	display: flex; justify-content: center; align-items: center;
+}
+
+#social-media a:active { width: 56px; height: 56px; }
+a#facebook { background-image: url('../images/basic_social/colored/64/circle/facebook.png'); }
+a#linkedin { background-image: url('../images/basic_social/colored/64/circle/linkedin.png'); }
+a#skype { background-image: url('../images/basic_social/colored/64/circle/skype.png'); }
+a#twitter { background-image: url('../images/basic_social/colored/64/circle/twitter.png'); }
+a#github { background-image: url('../images/basic_social/colored/64/circle/github_alt.png'); }
+a#email { background-image: url('../images/basic_social/colored/64/circle/email.png'); }
+a#location { background-image: url('../images/basic_social/colored/64/circle/location.png'); }
+a#pica { background-image: url('../images/pic1.jpg'); }
+a#picb { background-image: url('../images/pic2.jpg'); }
+
+footer { text-align: center; display: flex;
+justify-content: center; align-items: center; }
+
+footer div { text-align: center; width: 100%; }
+
+#resume { list-style-type: none; padding: 0; }
+#resume li :first-child { font-weight: bold; font-style: italic; }
+#resume li a { color: LightSalmon; font-style: normal; }
+.section-head { font-weight: bold; font-size: 1.25em; }
+
+ul ul { list-style-type: none; padding: 0; margin-bottom: 20px; }
+ul ul ul { list-style-type: circle; padding-left: 20px; }
+ul li p { margin: 0; padding: 0; }
+ul li { padding: 4px 0; }
+
+#about-container { width: 90%; margin: auto; }
+
+#resume hr {
+	margin: 0;
+}
+
+#education li, #experience li, #coursework li, #technology li {
+	margin: 10px 0;
+}

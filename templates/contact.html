@@ -1,0 +1,27 @@
+{% extends '_master.html' %}
+
+{% block title %}
+	Contact | Richard Torres
+{% endblock %}
+
+{% block content %}
+	<h2>Contact Me</h2>
+		<p id="form-instruct">Question? Comment? Funny anecdote? I'd love to hear from you.</p>
+		<form method="post" action="/contact">
+			<div id="name">
+				<label for="name">Name</label>
+				<input type="text" name="name"/>
+			</div>
+			<div id="email">
+				<label for="email">E-mail</label>
+				<input type="email" name="email"/>
+			</div>
+			<div id="message">
+				<label for="message">Message</label>
+				<textarea name="message"></textarea>
+			</div>
+			<div id="submit">
+				<input type="submit"/>
+			</div>
+		</form>
+{% endblock %}

@@ -1,0 +1,19 @@
+#cookie-wrapper {
+	background-color: white;
+	margin: 10px auto;
+	width: 640px;
+	text-align: center;
+	border-radius: 5px;
+	padding: 20px 0;
+}
+
+#cookie-wrapper img {
+	width: 200px;
+	margin: 50px auto;
+}
+
+#cookie-wrapper h2 {
+	font-size: 1.25em;
+	padding: 0;
+	margin: 0;
+}

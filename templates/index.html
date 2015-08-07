@@ -1,47 +1,13 @@
-{% extends "base.html" %}
+{% extends '_master.html' %}
+
+{% block title %}
+	Richard Torres
+{% endblock %}
 
 {% block content %}
-<div id="wrapper">
-	
-	<div id="greeting">
-		{% if username %}
-			<h3>Welcome back, {{username}}!</h3>
-		{% endif %}
-	</div>
-	
-	<div id="navbar">
-		<div id="first-page">
-			{% if page_no > 1 %}
-				<a href="/blog/page/1">&larr; First</a>
-			{% endif %}
-		</div>
-		<div id="previous-page">
-			{% if page_no > 1 %}
-				<a href="/blog/page/{{page_no-1}}">&larr; Previous</a>
-			{% endif %}
-		</div>
-		<div id="next-page">
-			{% if page_no < page_nos %}
-				<a href="/blog/page/{{page_no+1}}">Next &rarr;</a>
-			{% endif %}
-		</div>
-		<div id="last-page">
-			{% if page_no < page_nos %}
-				<a href="/blog/page/{{page_nos}}">Last &rarr;</a>
-			{% endif %}
-		</div>
-	</div>
-	
-	{% for blogpost in entries %}
-		<div id="blog">
-			<a href="/blog/{{blogpost.key().id()}}"><div class="subject">{{blogpost.subject}}</div></a>
-			<pre>{{blogpost.content}}</pre>
-			<p>Posted On: {{blogpost.created.strftime('%I:%M:%S %p %d %b %Y')}}</p>
-			{% if blogpost.updated %}
-				<p>Updated On: {{blogpost.updated.strftime('%I:%M:%S %p %d %b %Y')}}</p>
-			{% endif %}
-				<p>Posted By: {{blogpost.author}}</p>
-		</div>
-	{% endfor %}
-</div>
+	<h3>Hi! I'm Richard, a STEM educator and web developer based in Boston, MA.</h3>
+	<p>I've been a mathematics, science, and computer science teacher for years and a developing developer (bad pun intended).
+	I'm currently on the market looking for new opportunities in development.</p>
+	<p>I enjoy building applications in PHP and Python. </p>
+	<p>Check out my projects, read my blog, read more about me, and feel free to leave me a message!</p>
 {% endblock %}

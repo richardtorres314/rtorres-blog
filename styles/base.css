@@ -6,7 +6,7 @@ body {
 	font-size: 18pt;
 	font-family: Muli;
 	color: dimgray;
-	background-color: #77D;
+	background-color: #5082D7;
 	display: flex;
 	flex-direction: column;
 	cursor: default;
@@ -25,24 +25,27 @@ header, footer {
 	font-family: Muli;
 }
 
-header {
-	text-align: center;
+#head-wrapper {
 	width: 100%;
-	margin-bottom: 10px;
-}
-
-header span {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-header .flex-head {
+.flex-head {
 	width: 100%;
 }
 
 .flex-head div {
 	display: inline-block;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	width: 100%;
+	margin-bottom: 10px;
 }
 
 .bullet {
@@ -58,6 +61,7 @@ header .flex-head {
 
 header h1 {
 	margin: 0;
+	font-size: 1.9em;
 }
 
 header a {
@@ -69,4 +73,114 @@ header #sub-header {
 	font-size: 0.8em;
 	color: #DDD;
 	font-weight: bold;
+}
+
+@media all and (max-width: 1024px) {
+	header h1 {
+		font-size: 1.4em;
+	}
+	
+	#user_forms a {
+		font-size: 0.9em;
+	}
+	
+	#navbar div a {
+		font-size: 1em;
+	}
+}
+
+@media all and (max-device-width: 1060px) {
+	header h1 {
+		font-size: 1.6em;
+	}
+	
+	#user_forms a {
+		font-size: 0.9em;
+	}
+	
+	#navbar div a {
+		font-size: 1em;
+	}
+}
+
+@media all and (max-width: 768px) {
+	#head-wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+	
+	#user_forms {
+		text-align: center;
+	}
+	
+	header h1 {
+		font-size: 1.4em;
+	}
+	
+	.flex-head {
+		font-size: 1em;
+	}
+	
+	#wrapper {
+		width: 100%;
+		min-width: inherit;
+	}
+	
+	#navbar {
+		width: 100%;
+	}
+	
+	#navbar div a {
+		font-size: 1em;
+	}
+	
+	#blog {
+		width: 100%;
+	}
+	
+	#blog > * {
+		width: 100%;
+		display: inline-block;
+	}
+}
+
+@media all and (max-device-width: 768px) {
+	#head-wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+	
+	#user_forms {
+		text-align: center;
+	}
+	
+	header h1 {
+		font-size: 1.4em;
+	}
+	
+	.flex-head {
+		font-size: 1em;
+	}
+	
+	#wrapper {
+		width: 100%;
+		min-width: inherit;
+	}
+	
+	#navbar {
+		width: 100%;
+	}
+	
+	#navbar div a {
+		font-size: 1.25em;
+	}
+	
+	#blog {
+		width: 100%;
+	}
+	
+	#blog > * {
+		width: 100%;
+		display: inline-block;
+	}
 }

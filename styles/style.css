@@ -1,5 +1,6 @@
 #wrapper {
 	width: 50%;
+	min-width: 640px;
 	margin: 10px auto;
 }
 
@@ -68,7 +69,6 @@ textarea {
 }
 
 #content, #blogpost {
-	width: 640px;
 	margin: 5px 0;
 	text-align: left;
 	word-wrap: break-word;
@@ -227,4 +227,5 @@ input[type=submit], #post-form-options div a  {
 #signup input[type=submit], #login input[type=submit] {
 	background: none;
 	font-size: 1em;
+	outline: 0;
 }
