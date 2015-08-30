@@ -194,6 +194,38 @@ input[type=submit], #post-form-options div a  {
 	font-family: Muli;
 }
 
+input[type=submit]:focus, form a:focus {
+	outline: none;
+	color: #F77;
+}
+
+form .row div {
+	display: inline-block;
+}
+
+form .row {
+	display: flex;
+	align-items: center;
+}
+
+form .row div:not(:first-of-type):not(:last-of-type) {
+	margin: 0px 10px;
+}
+
+form .col-1 {
+	width: 200px;
+	text-align: right;
+}
+
+form .row input {
+	height: 2em;
+	padding-left: 10px;
+}
+
+form .row:not(:first-of-type):not(:last-of-type) {
+	margin: 20px auto;
+}
+
 #post-form-options div a {
 	font-size: 0.75em;
 	font-weight: bold;
@@ -210,14 +242,6 @@ input[type=submit], #post-form-options div a  {
 
 #signup a, #login a {
 	font-size: 0.9em;
-}
-
-#signup td, #login td {
-	height: 2em;
-}
-
-#signup td:first-child, #login td:first-child {
-	text-align: right;
 }
 
 #signup_redirect {

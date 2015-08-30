@@ -3,34 +3,31 @@
 {% block content %}
 	<form method="POST" id="signup">
 		<h3>Sign up for an account today!</h3>
-		<table>
-			<tr>
-				<td>Username:</td>
-				<td><input type="text" name="username" value="{{username}}"/></td>
-				<td><div class="error" id="error_user">{{error_user}}</div></td>
-			</tr>
-			<tr>
-				<td>Password:</td>
-				<td><input type="password" name="password"/></td>
-				<td><div class="error" id="error_password">{{error_password}}</div></td>
-			</tr>
-			<tr>
-				<td>Verify:</td>
-				<td><input type="password" name="verify"/></td>
-				<td><div class="error" id="error_verify">{{error_verify}}</div></td>
-			</tr>
-			<tr>
-				<td>Email (Optional):</td>
-				<td><input type="email" name="email" value="{{email}}"/></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><input type="submit" value="Signup"/></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>Already a member? <a href="login">Login here</a></td>
-			</tr>
-		</table>
+		<div class="form-frame">
+			<div class="row-wrapper">
+				<div class="row">
+					<div class="col-1">Username:</div>
+					<div><input type="text" name="username" value="{{username}}"/></div>
+					<div class="error" id="error_user">{{error_user}}</div>
+				</div>
+				<div class="row">
+					<div class="col-1">Password:</div>
+					<div><input type="password" name="password"/></div>
+					<div class="error" id="error_password">{{error_password}}</div>
+				</div>
+				<div class="row">
+					<div class="col-1">Verify:</div>
+					<div><input type="password" name="verify"/></div>
+					<div class="error" id="error_verify">{{error_verify}}</div>
+				</div>
+				<div class="row">
+					<div class="col-1">Email: (Optional)</div>
+					<div><input type="email" name="email" value="{{email}}"/></div>
+					<div></div>
+				</div>
+			</div>
+			<div><input type="submit" value="Signup"/></div>
+			<div>Already a member? <a href="login">Login here</a></div>
+		</div>
 	</form>
 {% endblock %}

@@ -3,25 +3,21 @@
 {% block content %}
 	<form method="post" id="login">
 		<h3>Log in to your account</h3>
-		<table>
-			<tr>
-				<td>Username</td>
-				<td><input type="text" name="username"/></td>
-				<td><div>{{ error_user }}</div></td>
-			</tr>
-			<tr>
-				<td>Password</td>
-				<td><input type="password" name="password"/></td>
-				<td>{{ error_password }}</td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><input type="submit" value="Login"/></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>Need to signup? <a href="/blog/signup">Signup Here</a></td>
-			</tr>
-		</table>
+		<div class="form-frame">
+			<div class="row-wrapper">
+				<div  class="row">
+					<div class="col-1">Username</div>
+					<div><input type="text" name="username"/></div>
+					<div>{{ error_user }}</div>
+				</div>
+				<div class="row">
+					<div class="col-1">Password</div>
+					<div><input type="password" name="password"/></div>
+					<div>{{ error_password }}</div>
+				</div>
+				<div><input type="submit" value="Login"/></div>
+				<div>Need to signup? <a href="/blog/signup">Signup Here</a></div>
+			</div>
+		</div>
 	</form>
 {% endblock %}

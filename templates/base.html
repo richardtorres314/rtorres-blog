@@ -20,7 +20,7 @@
 					<h1><a href="/blog" id="header">Academy Blog</a></h1>
 				</div>
 				<div id="user_forms" class="flex-head">
-					{% if username: %}
+					{% if status == 1: %}
 						<div id="head-left"><a href="/blog/newpost">Write a Post</a></div>
 						<div class="bullet" id="head-center">&bullet;</div>
 						<div id="head-right"><a href="/blog/logout">Logout</a></div>
