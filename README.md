@@ -23,11 +23,10 @@ for educational purposes.
 - Creating, updating, and deleting of a user's personal entries
 - Form verification
 - Pagination and permalinks to blog entries
-- Security features to prevent malicious cookies
+- Security features to prevent malicious cookies, include salt and sha256 encryption
 
 ### To Do ###
 
-- Deal with cookies disabled
 - 404 handling
 - Add "like" feature
 
